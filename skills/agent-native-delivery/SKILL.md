@@ -1,0 +1,33 @@
+---
+name: agent-native-delivery
+description: >-
+  Audit and maintain agent instructions and delivery documentation in a code repository.
+  Use for AGENTS.md hierarchies, reconciling architecture or API docs with implementation,
+  checking instruction discovery, or verifying documentation and guidance changes.
+  适用于仓库文档审计、Agent 指令分层和文档建设交付。
+license: MIT
+---
+
+# Agent-Native Delivery
+
+以仓库的实际实现和当前授权为依据，维护 Agent 能找到、读懂并验证的项目指令与文档。
+
+## 确认任务与事实
+
+1. 确认用户要审计、局部修订还是建设整套指令与文档。定位仓库根、分支、已有修改与受影响路径。只读审计交付发现和证据，修改任务保护用户与其他维护者的已有工作。
+2. 从根入口沿各目标路径读取适用的局部指令，再读任务关联的文档章节。按本次范围核对相关源码、消费者、测试或配置。自动加载情况不明确时显式读取，交付只列实际读过的依据。
+3. 用当前实现、决策和版本记录解释冲突。先核实历史记录、未完成迁移或现行表述错误各自的证据。外部事实需要时查官方来源，记录版本和核查范围。
+
+涉及多模块、规则重组、文档与实现冲突或跨 Agent 兼容时，按需读 [仓库审计与文档结构](references/repository-audit.md)。局部修订可直接核对涉及的入口和证据。
+
+## 放在正确的位置
+
+- 根入口保留全局硬约束、目录职责和按任务读取的入口。子目录只写该范围独有且长期适用的规则，链接实际入口和必要验证。
+- 用既有架构、契约、数据、设计决策和发布记录承载各自的事实。新增入口须有清晰职责和读者。历史证据保留原语境，由当前入口标明时间和适用范围。
+- 迁移指令前核对重要规则的新位置和效力。当前授权内只调整本次范围，涉及推进迁移、改变架构或放宽约束时核对决策及授权。临时调试发现留在对应记录，经复核且反复有用的经验才进入指令。
+
+## 核验与交付
+
+检查差异、活动文档的链接和路径、指令作用域、事实出处及现有验证入口。按实际影响选择验证，纯文档改动优先核验这些静态证据。风险较高时安排与权限相符的独立复核。需选择证据或交接角色时读 [验证与交接](references/verification-and-handoff.md)。
+
+交付说明修改及理由、实读依据、运行过的检查及覆盖范围、待验证的事项。对远端提交、发布、凭据使用和真实环境操作按当前任务分别核对权限与范围。
